@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -48,15 +48,303 @@
 					</p>
 				</section>
 
+
 				<section>
-					<h2>Linux ?</h2>
+					<section id="Programme">
+						<h2>Programme</h2>
+					<ul>
+						<li>Historique</li>
+						<li>Concepts</li>
+						<li>Manipulation de fichiers (TP)</li>
+						<li>Execution de programmes (TP)</li>
+						<li>Ecriture de scripts (TP)</li>
+						<li>Utilisation de la file d'attente du cluster (TP)</li>
+					</ul>
+
+							
+	
+	
+					</section>
+				</section>
+
+
+
+
+
+				<section id=Historique">
+					<section>
+					
+					<h2>Historique</h2>
 					<p>
-					Linux dérive d'UNIX, un des premier système unifié de gestions du matériel informatique. A l'époque glorieuse du far ouest informatique, les laboratoires BELL ont recruté ces deux personnes:	
+					Années 60: Création d'UNIX et du language C dans les laboratoires Bell (aujourd'hui AT&T)
 					</p>
 					
-					<img width="178" height="238" data-src="images/" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+					<img data-src="images/ken-thompson-dennis-ritchie_hoshie_public-domain_s.jpg" width="400" alt="Up arrow">
+
+					<p> Ken Thompson & Dennis Ritchie </p>
+					</section>
+				
+
+					<section>	
+					<h2>Historique</h2>
+					<p>
+					Le materiel informatique dans les années 70
+					</p>
+					
+					<img data-src="images/computerThompson.jpg" width="400" alt="Up arrow">
+
+					</section>
+
+					
+					<section>	
+					<h2>Historique</h2>
+					<p>
+					Le materiel informatique dans les années 80: Le terminal ! 
+					</p>
+					
+					<img data-src="images/terminal.jpg" width="400" alt="Up arrow">
+
+					</section>
+
+
+					
+					<section>	
+					<h2>Historique</h2>
+					<p>
+					Arrivée des ordinateurs personnels (90)
+					</p>
+					
+					<img data-src="images/ibm_pc.jpg" width="400" alt="Up arrow">
+					<img data-src="images/mac.jpg" width="400" alt="Up arrow">
+
+					</section>
+
+
+					
+					<section>	
+					<h2>Historique</h2>
+					<p>
+					Arrivée des ordinateurs personnels (90)
+					</p>
+					
+					<img data-src="images/steve_jobs_bill_gates_19851.jpg" width="500" alt="Up arrow">
+
+					</section>
+
+
+					
+					<section>	
+					<p>
+					Pendant ce temps ... 
+					</p>
+					
+					<img data-src="images/Unix_history-simple.svg" width="1000" alt="Up arrow">
+
+					</section>
+
+
+					
+					<section>	
+						<p> Création de Linux (Linus Torvald, 1991, Helsinki)
+						</p>
+					<img data-src="images/115897-linus-torvald-nvidia.png" width="700" alt="Up arrow">
+
+					</section>
+
+
+
+
+					<section>
+					<p> Création de GNU (Richard Stallman, 1983, MIT)
+ 					</p>
+
+
+					<img data-src="images/stallman.jpg" width="300" alt="Up arrow">
+					<p>
+					<em>Free software fundation</em>, patrimoine mondiale de l'humanité (Unesco, 2004)
+					</p>
+					</section>
+
+
+
+					<section>
+					<p> Pourquoi GNU/Linux ?
+					<ul>
+						<li>Open source</li>
+						<li>Communautaire</li>
+							<ul>
+							<li> Stable (vous choissisez ou pas de faire des mises à jour)</li>
+							<li> Multi-tâches et multi-utilisateurs</li>
+							<li> Correction des bugs (pas besoin que MS ou Apple s'interesse à votre problème) </li>
+							<li> Dépot de codes (liste de programmes faciles à installer et sans virus) </li>
+							<li> Rapide car vous choissisez exactement ce que vous installez sur la machine </li>
+							<li> Et surtout ...</li>
+							</ul>
+
+					</ul>
+					</section>
+
+					<section>
+
+					<img data-src="images/desktopOSusage.png" width="500" alt="Up arrow" style="align:right">
+					<img data-src="images/OS_usage.png" width="500" alt="Up arrow" style="align:right">
+
+					</section>
+
 
 				</section>
+
+
+
+				<section id="Concepts">
+
+					<section id="Terminal & Shell">
+					<h2>
+					Terminal et Shell
+					</h2>	
+
+					Votre mode d'interaction avec le materiel
+
+					<img data-src="images/terl.png" width="500" alt="Up arrow">
+					<aside class="notes">
+					
+					Lors de votre connexion avec sur une machine Linux, vous êtes en général sur un écran noir, avec une invite de commande. Ceci est une invitation à utiliser un shell pour lancer vos opérations. 
+					
+					
+					</aside>
+
+
+
+					</section>
+
+					<section id ="Shell">
+					<h2>Shell </h2>
+					<p>Ensemble de commande qui permettent d'interagir depuis le terminal avec le noyau linux</p>
+
+
+
+
+					<img data-src="images/shell.jpg" width="400" alt="Up arrow">
+						
+					</section>
+
+					<section id="Fichiers">
+
+					<h2>Fichiers
+					</h2>
+					<p> TOUT EST FICHIER </p>
+					<ul>
+						<li>Fichier texte == lisible (ASCII) </li>
+						<li>Fichier binaire  == illisible </li>
+						<li>Repertoire (dossier)  == Lien vers des fichiers </li>
+						<li>Arborescence de dossiers == rangement  </li>
+						
+					</ul>
+
+
+				<!-- Example of nested vertical slides
+					<aside class="note">
+
+					On distingue les fichiers binaires (illisibles) des fichiers texte (traduit en code ASCII et lisible sur l'écran. Généralement, les fichiers binaires sont des programmes (ou commandes), les fichiers texte sont des données.  
+
+					Tout est fichier dans un OS. Pas de distinction faites sur l'extension, juste une indication et des conventions. Convention: Nom_de_fichier.extension 
+				exemple: Homo_sapiens_montpellier_lib1_R1.fastq 
+	On peut multiplier les extensions
+				exemple: Homo_sapiens_montpellier_lib1_R1.fastq.gz	
+					</aside>
+					-->
+					</section>
+					
+					<section id="Arborescence">
+					<h2> Arborescence  </h2>
+				
+					<img data-src="images/arboresence.png" width="700" alt="Up arrow">
+
+					</section>
+
+
+					<section id="Chemin (PATH)">
+					<h2> Les chemins absolus et relatifs </h2>
+
+					<p>Spécifier ou se trouve un fichier</p>
+						<ul>							
+							<li>depuis l'endroit ou vous êtes == relatif</li>
+							<li>depuis un point fixe (la racine) == absolu </li>
+						</ul>					
+					<p> Symboles clés
+						</p>
+						<ul>							
+							<li> <big>.</big>    ou vous êtes </li>
+							<li> ..   Le répertoire parent (au dessus dans l'arborescence) </li>
+							<li> /    La racine (lieu qui contient TOUTE l'arborescence)  </li>
+							<li> ~    votre repértoire utilisateur (home, où tout les fichiers vous appartiennent) </li>
+						</ul>		
+						
+
+					</section>
+
+
+
+
+
+
+					<section>
+						<h2>Les droits</h2>
+						<p>C'est un système partagé. Un fichier vous appartient ou pas: Vous pouvez le lire, y écrire, ou eventuellement l'executer. Ou vous pouvez seulement le lire. 	
+						</p>
+					</section>
+	
+
+					<section id="Commandes">
+					<h2> Les commandes sont des fichiers binaires </h2>
+						<p>
+						Ou sont les programmes ?
+						</p>
+					</section>
+
+
+
+
+					<section id="StructureCommande">
+					<h2>Structure d'une commande bash</h2>
+					F(x,y, ...) = z
+					<ul>
+						<li>F est la commande</li>
+						<li> z, le résultat de la commande, est appelé "sortie standard" </li>
+						<li>x, y et autre sont des arguments (optionnels)</li>
+						<li> s'ajoute des "flag" == options qui modifie le comportement de la commande </li>
+						<li> s'ajoute une sortie d'erreur, utile quand quelque chose ne se passe pas bien (souvent)</li>
+					</ul>
+					syntaxe:  F --options -o 1  x > z 
+
+					</section>
+
+
+					<section id="">
+
+					</section>
+
+
+					<section id="">
+
+					</section>
+
+
+					<section id="">
+
+					</section>
+
+
+					<section id="">
+
+					</section>
+
+
+					
+
+				</section>
+
+
 
 				<!-- Example of nested vertical slides -->
 				<section>
