@@ -55,19 +55,14 @@
 					<ul>
 						<li>Historique</li>
 						<li>Concepts</li>
-						<li>Manipulation de fichiers (TP)</li>
-						<li>Execution de programmes (TP)</li>
-						<li>Ecriture de scripts (TP)</li>
-						<li>Utilisation de la file d'attente du cluster (TP)</li>
+						<li>Manipulation de fichiers (TP1)</li>
+						<li>Execution de programmes (TP2 - Faire un blast)</li>
+						<li>Ecriture de scripts (TP3 -  Faire un mapping)</li>
+						<li>Utilisation de la file d'attente du cluster (TP4 - Faire un assemblage) </li>
 					</ul>
 
-							
-	
-	
 					</section>
 				</section>
-
-
 
 
 
@@ -290,20 +285,9 @@
 
 					<section>
 						<h2>Les droits</h2>
-						<p>C'est un système partagé. Un fichier vous appartient ou pas: Vous pouvez le lire, y écrire, ou eventuellement l'executer. Ou vous pouvez seulement le lire. 	
-						</p>
+						C'est un système partagé. <br> Un fichier vous appartient ou pas<br>						exemple
 					</section>
 	
-
-					<section id="Commandes">
-					<h2> Les commandes sont des fichiers binaires </h2>
-						<p>
-						Ou sont les programmes ?
-						</p>
-						which ls
-							
-					</section>
-
 
 
 
@@ -317,56 +301,62 @@
 						<li> s'ajoute des "flag" == options qui modifie le comportement de la commande </li>
 						<li> s'ajoute une sortie d'erreur, utile quand quelque chose ne se passe pas bien (souvent)</li>
 					</ul>
-					<p>syntaxe:  F --options -o 1  x > z </p> 
+					<p>syntaxe:  F -options  x y > z </p> 
+
+					</section>
+
+
+					<section id="InputOutput">
+					<h2>Redirection / pipe </h2>
+					<p> Une commande peut afficher du text à l'écran (appelé sortie standard et erreur standard). </p>
+					<p>Pour stocker la sortie standard dans un fichier, on utilise le symbole de redirection ">"</p>
+					<p>Pour stocker l'erreur standard dans un fichier, on utilise le symbole de redirection "2>"</p>
+					
+					<p>Pour rediriger la sortie standard d'une commande vers une autre commande, on utilise le symbole pipe "|"
+					</p>	
+
 
 					</section>
 
 
 					<section id="">
+						<h2> Tips! </h2>
+						<p> Appuyer sur TAB pour autocompleter les noms de repertoire et de fichiers  </p>
+						<p> Utiliser le symbole "*" (wildcard) pour signifier n'importe quelle chaines de charatère </p>
+						exemple	
+						
+
 
 					</section>
-
-
-					<section id="">
-
-					</section>
-
-
-					<section id="">
-
-					</section>
-
-
-					<section id="">
-
-					</section>
-
 
 					
 
 				</section>
+				
+					<section>
+					<h2>TP1: Manipulation de fichiers via des  commandes unix</h2>
+					</section>
+				
+				
+						
+					<section>
+					<h2>TP2: Faire un blast </h2>
+				
+					</section>
+				
 
+					<section>
+					<h2>TP3: Faire un mapping</h2>
+					
+					</section>
+				
+				
+					<section>
+					<h2>TP4: Faire un assemblage</h2>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					</section>		
+	
 
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
 
 
 
