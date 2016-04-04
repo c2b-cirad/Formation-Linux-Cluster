@@ -56,9 +56,8 @@
 						<li>Historique</li>
 						<li>Concepts</li>
 						<li>Manipulation de fichiers (TP1)</li>
-						<li>Execution de programmes (TP2 - Faire un blast)</li>
-						<li>Ecriture de scripts (TP3 -  Faire un mapping)</li>
-						<li>Utilisation de la file d'attente du cluster (TP4 - Faire un assemblage) </li>
+						<li>Execution de programme / écriture d'un scripts  (TP2 - Faire un blast)</li>
+						<li>Faire un mapping ?</li>
 					</ul>
 
 					</section>
@@ -158,7 +157,7 @@
 
 					<img data-src="images/stallman.jpg" width="300" alt="Up arrow">
 					<p>
-					<em>Free software fundation</em>, patrimoine mondiale de l'humanité (Unesco, 2004)
+					<em>Free software fundation</em>, patrimoine mondial de l'humanité (Unesco, 2004)
 					</p>
 					</section>
 
@@ -225,18 +224,91 @@
 						
 					</section>
 
+
+					<section> 
+					
+						<h2>Le cluster du CIRAD </h2>
+						
+					<img data-src="images/CC2.jpg" width="500" alt="Up arrow">
+
+
+
+					</section>
+
+
+					<section> 
+					
+						<h2>SGE: Sun Grid Engine</h2>
+						
+					<img data-src="images/sge_cluster.png" width="700" alt="Up arrow">
+
+
+					</section>
+
+					<section>
+						<p>Pour se connecter au cluster de l'université de la guadeloupe, trois actions: 
+						</p>
+						<ul>
+							<li>ssh "login"@sasc3i.univ-ag.fr</li>
+							<li>ssh "login"@wahoo</li>
+							<li>qrsh -q normal.q</li>
+						</ul>
+
+
+					</section>
+				
+
 					<section id="Fichiers">
 
 					<h2>Fichiers
 					</h2>
 					<p> TOUT EST FICHIER </p>
 					<ul>
-						<li>Fichier texte == lisible (ASCII) </li>
-						<li>Fichier binaire  == illisible </li>
-						<li>Repertoire (dossier)  == Lien vers des fichiers </li>
-						<li>Arborescence de dossiers == rangement  </li>
+						<li>Fichier texte == "human readable"  (ASCII) </li>
+							<ul>
+								<li> une page  html  </li>
+								<li> un fichier fasta </li>
+								<li> un script R </li>
+
+							</ul>
 						
+						cat nomdefichier
+						
+						
+						<li>Fichier binaire  == "human unreadable"  </li>
+							<ul>
+								<li> Fichier .docx </li>
+								<li> Programme Word.exe </li>
+								<li> Les commande unix (cd, ls, mkdir etc ...) </li>
+								<li> Un fichier compressé (zip)  </li>
+							</ul>
+			
 					</ul>
+					</section>
+
+					<section id="Fichiers">
+
+					<h2>Fichiers
+					</h2>
+					<p> REMARQUES </p>
+					<ul>
+						<li>Un fichier a des droits </li>
+							<ul>
+								<li> r : "readable"  </li>
+								<li> w : "writable" </li>
+								<li> x : "eXecutable" </li>
+
+							</ul>
+						<li>un fichier est stocké sur un support (disque dur)</li>
+							<ul>
+								<li> Il a une adresse (inode) </li>
+								<li> On peut creer des liens (raccourci) vers cette adresse </li>
+								<li> Il est positionné dans un repertoire (d: directory), au sein d'une arborescence </li>
+							</ul>
+			
+					</ul>
+					</section>
+
 
 
 				<!-- Example of nested vertical slides
@@ -250,8 +322,15 @@
 				exemple: Homo_sapiens_montpellier_lib1_R1.fastq.gz	
 					</aside>
 					-->
+
+					<section id="Arborescence">
+					<h2> Arborescence  </h2>
+				
+					<ul>	
+						<li>Repertoire (dossier)  == Contient des fichiers </li>
+						<li>Arborescence de dossiers == hierarchie des repertoires </li>
+					</ul>					
 					</section>
-					
 					<section id="Arborescence">
 					<h2> Arborescence  </h2>
 				
@@ -264,32 +343,78 @@
 					<h2> Les chemins absolus et relatifs </h2>
 
 					<p>Spécifier ou se trouve un fichier</p>
+						
 						<ul>							
 							<li>depuis l'endroit ou vous êtes == relatif</li>
 							<li>depuis un point fixe (la racine) == absolu </li>
 						</ul>					
-					<p> Symboles clés
+					
+
+					</section>
+
+
+
+					<section id="Chemin (PATH)">
+					<h2> Les chemins absolus et relatifs </h2>
+
+					<p>Exemple:</p>
+						
+						<ul>							
+							<li>absolu: /home/cirad/eloire/share/fichier.txt</li>
+							<li>relatif: share/fichiers.txt</li>
+						</ul>					
+					<p> Remarques
 						</p>
 						<ul>							
-							<li> <big>.</big>    ou vous êtes </li>
-							<li> ..   Le répertoire parent (au dessus dans l'arborescence) </li>
+							<li>pour savoir ou vous êtes placé dans l'arborescence, tapez pwd (Print Working Directory)</li>
+							<li>Pour vous deplacer dans les répertoire, utilisez cd (Change directory) </li>
+							<li>Pour lister les fichiers contenu dans un repertoire, utilisez ls (LiSt)
+						</ul>
+					
+
+					</section>
+
+
+
+					<section id="Chemin (PATH)">
+					<h2> Les chemins absolus et relatifs </h2>
+			
+					<p> Remarques
+						</p>
+						<ul>							
+							<li>pour savoir ou vous êtes placé dans l'arborescence, taper pwd (Print Working Directory)</li>
+							<li>Pour vous deplacer dans les répertoire, utiliser cd (Change directory) </li>
+						</ul>
+					<p> Raccourci </p>
+						<ul>
+						<li> ..   Le répertoire parent (au dessus dans l'arborescence) </li>
 							<li> /    La racine (lieu qui contient TOUTE l'arborescence)  </li>
 							<li> ~    votre repértoire utilisateur (home, où tout les fichiers vous appartiennent) </li>
+					
+
+					</section>
+
+
+					<section id="Chemin (PATH)">
+					<h2> Les chemins absolus et relatifs </h2>
+			
+					<p> Remarques
+						</p>
+						<ul>							
+							<li>pour savoir ou vous êtes placé dans l'arborescence, taper pwd (Print Working Directory)</li>
+							<li>Pour vous deplacer dans les répertoire, utiliser cd (Change Directory) </li>
+						</ul>
+						<p>Exemples</p>
+						<ul>
+							<li><FONT COLOR="red" >cd /home/eloire/share </FONT> : Aller dans le repertoire share sur mon compte</li>
+							<li><FONT COLOR="red" >cd .. </FONT> : Remonter d'un niveau dans l'aborescence</li>
+							<li><FONT COLOR="red" >cd TP1</FONT> : Allez dans le repertoire TP1 (doit exister dans votre repertoire courant !) </li>
+							<li><FONT COLOR="red" >cd  ~</FONT> : Allez dans votre "home" </li>
 						</ul>		
 						
 
 					</section>
 
-
-
-
-
-
-					<section>
-						<h2>Les droits</h2>
-						C'est un système partagé. <br> Un fichier vous appartient ou pas<br>						exemple
-					</section>
-	
 
 
 
@@ -304,9 +429,46 @@
 						<li> s'ajoute une sortie d'erreur, utile quand quelque chose ne se passe pas bien (souvent)</li>
 					</ul>
 					<p>syntaxe:  F -options  x y > z </p> 
-					exemple
 
 					</section>
+
+
+					<section id="StructureCommande">
+					<h2>Exemple de commande</h2>
+					<ul>
+						<li><FONT COLOR="red" >cd </FONT> </li>
+					       	<li><FONT COLOR="red" >ls </FONT> </li>
+						<li><FONT COLOR="red" >pwd</FONT> </li>
+						<li><FONT COLOR="red" >mkdir TP1 </FONT> : Creer le repertoire TP1 dans votre repertoire courant</li>
+						<li><FONT COLOR="red" >rm fichier.txt </FONT> : Supprime le fichier fichier.txt</li>
+						<li><FONT COLOR="red" >ln -s fichier.txt share/fichier.txt</FONT> : creer un raccourci vers le fichier dans le repertoire share</li>
+						<li><FONT COLOR="red" >mv fichier.txt share/ </FONT> : Deplace le fichier dans le repertoire share </li>
+						<li><FONT COLOR="red" >nedit fichier.txt </FONT> : Edition de fichier.txt  </li>
+						<li><FONT COLOR="red" >ls > listefichier.txt </FONT> : copie la liste des fichiers dans un fichier </li>
+
+					</ul>
+
+					</section>
+
+
+
+					<section id="StructureCommande">
+					<h2>Exemple de commande GNU avancée</h2>
+					<ul>
+						<li><FONT COLOR="red" >wc fichier.txt</FONT> :  Compte le nombre de charactères, de ligne</li>
+						<li><FONT COLOR="red" >wc -l fichier.txt </FONT> :  Compte le nombre de ligne</li>
+						<li><FONT COLOR="red" >grep toto fichier.txt</FONT> : Affiche toutes les lignes du fichiers qui contiennent le mot "toto"</li>
+						<li><FONT COLOR="red" >grep -c toto fichier.txt</FONT> : compte toutes les lignes du fichiers qui contiennent le mot "toto"</li>
+						<li><FONT COLOR="red" >awk '{print $2}' fichier.csv </FONT> : Affiche la deuxième colonne de fichier.csv </li>
+						<li><FONT COLOR="red" >du -h fichier.txt </FONT> : Affiche la taille (en Mo) d'un fichier </li>
+						<li><FONT COLOR="red" >nedit fichier.txt </FONT> : Edition de fichier.txt  </li>
+						<li><FONT COLOR="red" >ls > listefichier.txt </FONT> : copie la liste des fichiers dans un fichier </li>
+
+					</ul>
+
+					</section>
+
+
 
 
 					<section id="InputOutput">
@@ -329,29 +491,10 @@
 						<li> Utiliser le symbole "*" (wildcard) pour signifier n'importe quelle chaine de charatères </li>
 						<li> La touche &uarr; rappelle les commandes précedentes </li>
 						<li> la commande history liste toutes les commandes que vous avez executées </li>
+						<li> Ctrl + C pour interrompre une tâche</li>
 						</ul>
 						exemple	
 						
-
-
-					</section>
-
-					<section> 
-					
-						<h2>Le cluster du CIRAD </h2>
-						
-					<img data-src="images/CC2.jpg" width="500" alt="Up arrow">
-
-
-
-					</section>
-
-
-					<section> 
-					
-						<h2>SGE: Sun Grid Engine</h2>
-						
-					<img data-src="images/sge_cluster.png" width="700" alt="Up arrow">
 
 
 					</section>
@@ -359,12 +502,24 @@
 				
 					<section>
 					<h2>TP1: Demonstration de manipulation de fichiers via des commandes unix</h2>
+					<p>But: </p>
+					<ul>
+						<li> se deplacer dans l'arborescence</li>
+						<li> creer un repertoire </li>
+						<li> copier un fichier</li>
+						<li> lancer des commandes </li>
+						<li> chaîner des commandes </li>
+					</ul>
 					</section>
 				
 		
 					<section>
 					<h2>TP2: Faire un blast </h2>
-				
+					<p>But:</p>
+					<ul>
+						<li> editer un fichier texte contenant des instructions </li>
+						<li> soumettre la tâche au cluster </li>
+					</ul>
 					</section>
 				
 
@@ -373,12 +528,7 @@
 					
 					</section>
 				
-				
-					<section>
-					<h2>TP4: Faire un assemblage</h2>
-
-					</section>		
-	
+			
 
 
 
